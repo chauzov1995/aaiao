@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#99cc55</color>
+    <color name="colorPrimaryDark">#88bb55</color>
+    <color name="colorAccent">#6677cc</color>
+    <color name="colorDelete">#ff5555</color>
+
+    <color name="ri_orage">#ff9966</color>
+    <color name="ri_blue">#55bbbb</color>
+    <color name="ri_green">#99cc55</color>
+    <color name="ri_brown">#bb9988</color>
+</resources>

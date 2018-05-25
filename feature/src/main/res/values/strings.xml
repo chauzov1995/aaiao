@@ -1,0 +1,13 @@
+<resources>
+
+    <string-array name="new_doh">
+        <item>Доход</item>
+        <item>Расход</item>
+        <item>Цель</item>
+
+    </string-array>
+
+
+    <string name="navigation_drawer_open">Открыть навигационный ящик</string>
+    <string name="navigation_drawer_close">Закрыть навигационный ящик</string>
+</resources>
