@@ -18,7 +18,8 @@ import android.view.MenuItem;
 
 import com.nchauzov.analizator.DB_sql;
 import com.nchauzov.analizator.R;
-import com.nchauzov.analizator.history.history_class;
+import com.nchauzov.analizator.history.history_activity;
+import com.nchauzov.analizator.reports.history_class;
 import com.nchauzov.analizator.reports.reports_activity;
 import com.nchauzov.analizator.statistics.statistics;
 
@@ -91,7 +92,6 @@ public class dodod_activity extends AppCompatActivity
             int name_dohod = c.getColumnIndex("name_dohod");
 
 
-
             do {
                 dohod_list.add(new dohod_class(c.getString(komment), c.getInt(summa_dohod),
                         c.getInt(summa_fakt), c.getInt(id), c.getInt(name_dohod), 0));
@@ -159,10 +159,11 @@ public class dodod_activity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.statistics) {
-
             Intent intent = new Intent(this, statistics.class);
             startActivity(intent);
-
+        } else if (id == R.id.history_menu) {
+            Intent intent = new Intent(this, history_activity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         }

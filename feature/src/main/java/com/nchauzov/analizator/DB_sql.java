@@ -82,6 +82,10 @@ public class DB_sql extends SQLiteOpenHelper {
                 "( `name_dohod`, `summa_dohod`, `summa_fakt`, `komment`, `visible`, `postoyan`) VALUES" +
                 " (3,0,0,'Цель',0,0)");
 
+        db.execSQL("INSERT INTO `an_purse`" +
+                "( `summa`, `komment`, `visible`, `deafault`) VALUES" +
+                " (0,'Кошелёк',0,1)");
+
 
         //   Toast.makeText(getactivity,
         //          Long.toString(rowID), Toast.LENGTH_SHORT).show();

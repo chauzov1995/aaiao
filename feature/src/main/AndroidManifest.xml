@@ -25,6 +25,7 @@
         <activity android:name=".dkr.new_dkr_crea"/>
         <activity android:name=".reports.reports_activity"/>
         <activity android:name=".statistics.statistics"/>
+        <activity android:name=".history.history_activity"/>
     </application>
 
 </manifest>

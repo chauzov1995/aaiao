@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 import com.nchauzov.analizator.DB_sql;
 import com.nchauzov.analizator.R;
-import com.nchauzov.analizator.history.history_adapter;
-import com.nchauzov.analizator.history.history_class;
 
 import java.util.ArrayList;
 
