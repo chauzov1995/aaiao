@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.nchauzov.analizator.DB_sql;
 import com.nchauzov.analizator.R;
@@ -36,12 +37,11 @@ public class new_dkr_crea extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_dkr_crea);
 
-        getact=this;
+        getact = this;
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
 
         id = getIntent().getIntExtra("id", 0);
@@ -64,16 +64,13 @@ public class new_dkr_crea extends AppCompatActivity {
 
                 komment_edit.setText(c.getString(komment));
                 summa_edit.setText(c.getString(summa));
-                kuda_intent=c.getInt(kuda);
+                kuda_intent = c.getInt(kuda);
             }
 
-        }else {
+        } else {
 
             kuda_intent = getIntent().getIntExtra("kuda", 0);
         }
-
-
-
 
 
         Button crea_dkr = (Button) findViewById(R.id.crea_dkr);
@@ -163,6 +160,54 @@ public class new_dkr_crea extends AppCompatActivity {
 
 
         date = ft.format(dateAndTime.getTime());
+    }
+
+
+    void calc_click(View view) {
+        int i = view.getId();
+        if (i == R.id.b11) {
+            summa_edit.append("1");
+        } else if (i == R.id.b12) {
+            summa_edit.append("2");
+        } else if (i == R.id.b13) {
+            summa_edit.append("3");
+        } else if (i == R.id.b14) {
+            summa_edit.append("1");
+        } else if (i == R.id.b15) {
+            summa_edit.append("1");
+        } else if (i == R.id.b21) {
+            summa_edit.append("4");
+        } else if (i == R.id.b22) {
+            summa_edit.append("5");
+        } else if (i == R.id.b23) {
+            summa_edit.append("6");
+        } else if (i == R.id.b24) {
+            summa_edit.append("-");
+        } else if (i == R.id.b25) {
+            summa_edit.append("%");
+        } else if (i == R.id.b31) {
+            summa_edit.append("7");
+        } else if (i == R.id.b32) {
+            summa_edit.append("8");
+        } else if (i == R.id.b33) {
+            summa_edit.append("9");
+        } else if (i == R.id.b34) {
+            summa_edit.append("+");
+        } else if (i == R.id.b35) {
+            summa_edit.append("x");
+        } else if (i == R.id.b41) {
+            summa_edit.append(".");
+        } else if (i == R.id.b42) {
+            summa_edit.append("0");
+        } else if (i == R.id.b43) {
+            summa_edit.append("=");
+        } else if (i == R.id.b44) {
+            summa_edit.append("=");
+        } else if (i == R.id.b45) {
+            summa_edit.append("/");
+        }
+
+
     }
 
 

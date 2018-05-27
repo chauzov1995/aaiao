@@ -67,7 +67,7 @@ public class dohod_redak extends AppCompatActivity {
         spinner = (Spinner) findViewById(R.id.spinner);
 
 
-        Toast.makeText(this, "Возможно вы правы" + id_prihod, Toast.LENGTH_LONG).show();
+
 
         if (id_prihod != 0) {
             DB_sql dbHelper = new DB_sql(this);

@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nchauzov.analizator">
 
-    <application>
-        <activity android:name=".dohod.dodod_activity">
+    <application >
+        <activity android:name=".dohod.dodod_activity" android:screenOrientation="portrait">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -21,11 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".dohod.dohod_redak"/>
-        <activity android:name=".dkr.new_dkr_crea"/>
-        <activity android:name=".reports.reports_activity"/>
-        <activity android:name=".statistics.statistics"/>
-        <activity android:name=".history.history_activity"/>
+        <activity android:name=".dohod.dohod_redak" android:screenOrientation="portrait"/>
+        <activity android:name=".dkr.new_dkr_crea" android:screenOrientation="portrait"/>
+        <activity android:name=".reports.reports_activity" android:screenOrientation="portrait"/>
+        <activity android:name=".statistics.statistics" android:screenOrientation="portrait"/>
+        <activity android:name=".history.history_activity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
