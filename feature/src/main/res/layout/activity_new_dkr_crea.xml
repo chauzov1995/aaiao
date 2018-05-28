@@ -34,13 +34,21 @@
             android:orientation="horizontal"
             android:weightSum="1">
 
+            <TextView
+                android:id="@+id/znak_vich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="24sp" />
+
             <EditText
                 android:id="@+id/summa_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-
-
                 android:layout_weight="1"
+
+
                 android:inputType="numberDecimal"
                 android:textAlignment="textEnd"
                 android:textSize="50sp" />
@@ -58,7 +66,7 @@
             android:id="@+id/komment_edit"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-
+            android:hint="комментарий"
 
             android:inputType="textPersonName" />
 
@@ -103,10 +111,10 @@
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:background="#555"
+                    android:onClick="calc_click"
                     android:text="3"
                     android:textColor="#fff"
-                    android:textSize="24sp"
-                    android:onClick="calc_click" />
+                    android:textSize="24sp" />
 
                 <Button
                     android:id="@+id/b14"

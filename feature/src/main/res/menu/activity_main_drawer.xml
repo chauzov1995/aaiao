@@ -6,16 +6,16 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/report_menu"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@drawable/baseline_today_24"
             android:title="Отчёт по дням" />
         <item
             android:id="@+id/statistics"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/baseline_trending_up_24"
             android:title="Статистика" />
         <item
             android:id="@+id/history_menu"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Статистика" />
+            android:icon="@drawable/baseline_history_24"
+            android:title="История" />
     </group>
     <item android:title="Обратная связь">
         <menu>

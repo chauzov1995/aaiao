@@ -2,14 +2,18 @@ package com.nchauzov.analizator.dkr;
 
 
 import android.app.DatePickerDialog;
+import android.app.Instrumentation;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -48,6 +52,14 @@ public class new_dkr_crea extends AppCompatActivity {
 
         summa_edit = (EditText) findViewById(R.id.summa_edit);
         komment_edit = (EditText) findViewById(R.id.komment_edit);
+
+        //для скрытия мягкой клавы
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            summa_edit.setShowSoftInputOnFocus(false);
+        } else {
+            summa_edit.setTextIsSelectable(true);
+            //N.B. Accepting the case when non editable text will be selectable
+        }
 
         if (id != 0) {
             DB_sql dbHelper = new DB_sql(this);
@@ -146,14 +158,23 @@ public class new_dkr_crea extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tollbar_ok, menu);
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int i = item.getItemId();
+        if (i == android.R.id.home) {
+            onBackPressed();
+        } else if (i == R.id.create_menu) {
+            create_dkr();
+
+        } else {
         }
+        return true;
     }
 
     private void setInitialDateTime() {
@@ -200,7 +221,9 @@ public class new_dkr_crea extends AppCompatActivity {
         } else if (i == R.id.b42) {
             summa_edit.append("0");
         } else if (i == R.id.b43) {
-            summa_edit.append("=");
+            //Instrumentation inst = new Instrumentation();
+
+          //  summa_edit.getCaret
         } else if (i == R.id.b44) {
             summa_edit.append("=");
         } else if (i == R.id.b45) {

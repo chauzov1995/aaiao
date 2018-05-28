@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".dohod.dohod_redak" android:screenOrientation="portrait"/>
-        <activity android:name=".dkr.new_dkr_crea" android:screenOrientation="portrait"/>
+        <activity android:name=".dkr.new_dkr_crea" android:screenOrientation="portrait" />
         <activity android:name=".reports.reports_activity" android:screenOrientation="portrait"/>
         <activity android:name=".statistics.statistics" android:screenOrientation="portrait"/>
         <activity android:name=".history.history_activity" android:screenOrientation="portrait"/>
