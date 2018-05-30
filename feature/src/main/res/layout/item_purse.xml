@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:layout_marginBottom="0dp"
+    android:background="@drawable/card_item_bg"
+    android:backgroundTint="#67c"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:weightSum="2">
+
+    <TextView
+        android:id="@+id/purse_komment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="СУММА"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/purse_summa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="3000"
+        android:textAlignment="textEnd"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:text="RUB"
+        android:textColor="#fff" />
+</LinearLayout>

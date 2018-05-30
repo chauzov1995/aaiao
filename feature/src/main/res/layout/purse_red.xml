@@ -15,24 +15,43 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="Отчёт по дням" />
+            app:title="Учёт" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/pager"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
-        <android.support.v4.view.PagerTabStrip
-            android:id="@+id/pagerTabStrip"
+        <TextView
+
+            android:id="@+id/tb_red_name"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:text="Название кошелька" />
+
+        <EditText
+            android:id="@+id/purse_komment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="top"></android.support.v4.view.PagerTabStrip>
+
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/colorPrimary"
+            android:text="Сохранить"
+            android:textAppearance="@android:style/TextAppearance.Material.Button" />
 
 
-    </android.support.v4.view.ViewPager>
-
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

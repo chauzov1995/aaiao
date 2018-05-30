@@ -28,6 +28,17 @@ public class reports_activity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        load_spisDoh();
+    }
+
+    public void load_spisDoh() {
+
+
         DB_sql dbHelper = new DB_sql(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
@@ -50,7 +61,6 @@ public class reports_activity extends AppCompatActivity {
         pager.setAdapter(pagerAdapter);
         pager.setCurrentItem(datamassiv.size() - 1);
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

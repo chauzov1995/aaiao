@@ -170,6 +170,7 @@ public class new_dkr_crea extends AppCompatActivity {
         if (i == android.R.id.home) {
             onBackPressed();
         } else if (i == R.id.create_menu) {
+            setInitialDateTime();//сегодня
             create_dkr();
 
         } else {

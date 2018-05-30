@@ -3,6 +3,7 @@ package com.nchauzov.analizator;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 
 public class DB_sql extends SQLiteOpenHelper {
@@ -97,3 +98,4 @@ public class DB_sql extends SQLiteOpenHelper {
 
     }
 }
+

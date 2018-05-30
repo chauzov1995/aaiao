@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import com.nchauzov.analizator.DB_sql;
 import com.nchauzov.analizator.R;
 import com.nchauzov.analizator.history.history_activity;
+import com.nchauzov.analizator.purse.purse_activity;
 import com.nchauzov.analizator.reports.history_class;
 import com.nchauzov.analizator.reports.reports_activity;
 import com.nchauzov.analizator.statistics.statistics;
@@ -38,7 +39,7 @@ public class dodod_activity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dohod);
+        setContentView(R.layout.dohod_activity);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -157,7 +158,9 @@ public class dodod_activity extends AppCompatActivity
 
             Intent intent = new Intent(this, reports_activity.class);
             startActivity(intent);
-
+        } else if (id == R.id.purse_menu) {
+            Intent intent = new Intent(this, purse_activity.class);
+            startActivity(intent);
         } else if (id == R.id.statistics) {
             Intent intent = new Intent(this, statistics.class);
             startActivity(intent);
@@ -167,6 +170,7 @@ public class dodod_activity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

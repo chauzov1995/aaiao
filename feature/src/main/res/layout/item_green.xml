@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/llitem"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="120dp"
     android:layout_margin="1.5dp"
     android:background="@drawable/card_item_bg"
     android:gravity="center"
@@ -11,15 +11,11 @@
     android:paddingBottom="5dp"
     android:paddingTop="5dp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_home_black_24dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal">
 
         <TextView
@@ -63,11 +59,11 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="23dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/btn_green_item"
         android:elegantTextHeight="false"
         android:text="Учёт"
+        android:textAllCaps="false"
         android:textColor="#ffffff"
-        android:textSize="10sp"
-        android:textAllCaps="false" />
+        android:textSize="10sp" />
 </LinearLayout>
