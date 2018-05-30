@@ -6,7 +6,7 @@
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/purse_menu"
-            android:icon="@drawable/baseline_today_24"
+            android:icon="@drawable/baseline_credit_card_24"
             android:title="Кошельки" />
         <item
             android:id="@+id/report_menu"

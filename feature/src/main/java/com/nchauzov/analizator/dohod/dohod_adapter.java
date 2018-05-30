@@ -175,7 +175,7 @@ public class dohod_adapter extends RecyclerView.Adapter<dohod_adapter.ViewHolder
         switch (this.getItemViewType(position)) {
             case 0:
 
-                holder.tvText3.setText(p.komment);
+               // holder.tvText3.setText(p.komment);
                 holder.llnp.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View r) {
 

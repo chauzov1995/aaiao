@@ -56,7 +56,7 @@ public class purse_activity extends AppCompatActivity {
         ArrayList<purse_class> dohod_list = new ArrayList<purse_class>();
 
 
-        Cursor c = db.rawQuery("SELECT a.id, (c.summa_fakt-b.summa_fakt) as summa, a.komment, a.deafault" +
+        Cursor c = db.rawQuery("SELECT a.id, (IFNULL(c.summa_fakt,0)-IFNULL(b.summa_fakt,0)) as summa, a.komment, a.deafault" +
                 "   FROM `an_purse` a" +
                 "   LEFT JOIN (" +
                 "   SELECT SUM(b1.summa) AS summa_fakt, b1.purse " +
@@ -86,7 +86,7 @@ public class purse_activity extends AppCompatActivity {
 
 
             do {
-                Toast.makeText(this, c.getString(deafault),Toast.LENGTH_LONG).show();
+
                 dohod_list.add(new purse_class(c.getInt(id), c.getInt(summa),
                         c.getString(komment), c.getInt(deafault)));
                 // переход на следующую строку

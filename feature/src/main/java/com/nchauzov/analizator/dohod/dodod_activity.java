@@ -15,6 +15,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.nchauzov.analizator.DB_sql;
 import com.nchauzov.analizator.R;
@@ -117,7 +118,7 @@ public class dodod_activity extends AppCompatActivity
         gvdoh.setAdapter(boxAdapter1);
         gvdoh.setHasFixedSize(true);
 
-
+      //  getBalance();
     }
 
     @Override
@@ -175,5 +176,39 @@ public class dodod_activity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    void getBalance(){
+        DB_sql dbHelper = new DB_sql(this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+                Cursor c = db.rawQuery("SELECT  (IFNULL(c.summa_fakt,0)-IFNULL(b.summa_fakt,0)) as summa " +
+                "   FROM `an_purse` a" +
+                "   LEFT JOIN (" +
+                "   SELECT SUM(b1.summa) AS summa_fakt, b1.purse " +
+                "   FROM an_dkr_hist b1" +
+                "   LEFT JOIN an_dohod b2" +
+                "   ON b1.kuda=b2.id" +
+                "   WHERE b1.visible=0 and b2.name_dohod!=1 " +
+                "   GROUP BY b1.purse)  b" +
+                "   ON a.id = b.purse" +
+                "   LEFT JOIN (" +
+                "   SELECT SUM(c1.summa) AS summa_fakt, c1.purse " +
+                "   FROM an_dkr_hist c1" +
+                "   LEFT JOIN an_dohod c2" +
+                "   ON c1.kuda=c2.id" +
+                "   WHERE c1.visible=0 and c2.name_dohod=1" +
+                "   GROUP BY c1.purse)  c" +
+                "   ON a.id = c.purse" +
+                "   WHERE a.visible=0  ORDER by a.id ASC", null);
+
+        if (c.moveToFirst()) {
+
+
+            int summa = c.getColumnIndex("summa");
+            Toast.makeText(this, c.getString(summa),Toast.LENGTH_LONG).show();
+        }
+        c.close();
     }
 }
